@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: MISTYROSE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="photos.controller.UserController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="600.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bg_camera.jpg" />
+         </image>
+      </ImageView>
+      <TitledPane alignment="CENTER" animated="false" collapsible="false" prefHeight="32.0" prefWidth="600.0" text="Users" textFill="#3f30c6">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+         <font>
+            <Font name="Jokerman" size="24.0" />
+         </font>
+      </TitledPane>
+      <ListView fx:id="usersList" layoutX="21.0" layoutY="72.0" onMouseClicked="#handleMouseEvent" prefHeight="503.0" prefWidth="306.0" />
+      <Label fx:id="userL" layoutX="356.0" layoutY="72.0" text="Username:" textFill="#3f30c6">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="userPassL" layoutX="356.0" layoutY="126.0" text="Password:" textFill="#3f30c6">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="adminPassL" layoutX="356.0" layoutY="252.0" text="Admin login required" textFill="#3f30c6">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userF" layoutX="356.0" layoutY="92.0" promptText="username" />
+      <TextField fx:id="userPassF" layoutX="356.0" layoutY="146.0" promptText="password" />
+      <Button fx:id="loginBtn2" layoutX="356.0" layoutY="193.0" mnemonicParsing="false" text="Login" textFill="#3f30c6" />
+      <Button fx:id="delete1" layoutX="432.0" layoutY="193.0" mnemonicParsing="false" text="Delete" textFill="#3f30c6" />
+      <TextField fx:id="adminPassF" layoutX="356.0" layoutY="272.0" promptText="*admin password" />
+      <Button fx:id="okBtn" layoutX="356.0" layoutY="315.0" mnemonicParsing="false" text="OK" textFill="#3f30c6" />
+      <Button fx:id="backBtn1" layoutX="332.0" layoutY="534.0" mnemonicParsing="false" onAction="#back" text="Back" textFill="#3f30c6">
+         <font>
+            <Font name="Jokerman" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

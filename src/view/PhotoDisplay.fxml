@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: MISTYROSE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PhotoDisplayController">
+   <children>
+      <TitledPane alignment="CENTER" animated="false" collapsible="false" prefHeight="28.0" prefWidth="600.0" text="Photo Selected" textFill="#3f30c6">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+         <font>
+            <Font name="Jokerman" size="29.0" />
+         </font>
+      </TitledPane>
+      <Text fx:id="tagsL" fill="#3f30c6" layoutX="236.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Tag" wrappingWidth="74.13671875" />
+      <Button fx:id="previousPhotoBtn" layoutX="235.0" layoutY="555.0" mnemonicParsing="false" onAction="#previousPhoto" prefHeight="31.0" prefWidth="38.0" text="&lt;" textFill="#3f30c6">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="nextPhotoBtn" layoutX="295.0" layoutY="555.0" mnemonicParsing="false" onAction="#nextPhoto" prefHeight="31.0" prefWidth="38.0" text="&gt;" textFill="#3f30c6">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="15.0" />
+         </font></Button>
+      <ImageView fx:id="photoImageView" fitHeight="196.0" fitWidth="367.0" layoutX="114.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@keep-calm-and-try-coding.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="14.0" layoutY="71.0" mnemonicParsing="false" onAction="#back" text="Back" textFill="#3f30c6" />
+      <Text fx:id="photoDateText" fill="#3f30c6" layoutX="120.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Photo date:" wrappingWidth="387.3037109375" />
+      <Text fx:id="captionText" fill="#3f30c6" layoutX="120.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Caption" wrappingWidth="379.73095703125" />
+      <Button layoutX="299.0" layoutY="384.0" mnemonicParsing="false" onAction="#addTag" text="+" textFill="#3f30c6" />
+      <Button layoutX="518.0" layoutY="71.0" mnemonicParsing="false" onAction="#handleLogoutButton" text="Logout" textFill="#3f30c6">
+         <font>
+            <Font name="Jokerman" size="15.0" />
+         </font>
+      </Button>
+      <ListView fx:id="tagListView" layoutX="184.0" layoutY="419.0" prefHeight="127.0" prefWidth="200.0" style="-fx-background-color: MISTYROSE;" />
+   </children>
+</AnchorPane>

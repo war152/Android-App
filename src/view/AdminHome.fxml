@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: MISTYROSE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserListController">
+   <children>
+      <TitledPane alignment="CENTER" collapsible="false" prefHeight="23.0" prefWidth="600.0" text="Users" textFill="#3f30c6">
+         <font>
+            <Font name="Jokerman" size="29.0" />
+         </font>
+      </TitledPane>
+      <TableView fx:id="table" layoutY="67.0" prefHeight="391.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="usernameColumn" prefWidth="140.0" text="Username" />
+          <TableColumn fx:id="passwordColumn" prefWidth="154.0" text="Password" />
+            <TableColumn fx:id="nameColumn" prefWidth="159.0" text="Name" />
+            <TableColumn fx:id="deleteColumn" prefWidth="146.0" text="Delete?" />
+        </columns>
+      </TableView>
+      <Label layoutX="31.0" layoutY="469.0" text="Create User" textFill="#3f30c6">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="171.0" layoutY="465.0" mnemonicParsing="false" onAction="#handleAddButton" text="+" textFill="#3f30c6">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="31.0" layoutY="547.0" mnemonicParsing="false" onAction="#handleLogoutButton" text="Logout" textFill="#3f30c6" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: MISTYROSE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AlbumListController">
+   <children>
+      <TitledPane alignment="CENTER" collapsible="false" layoutX="-1.0" prefHeight="32.0" prefWidth="600.0" text="Albums" textFill="#3f30c6">
+         <font>
+            <Font name="Jokerman" size="29.0" />
+         </font>
+      </TitledPane>
+      <ScrollBar layoutX="577.0" layoutY="67.0" orientation="VERTICAL" prefHeight="532.0" prefWidth="18.0" style="-fx-background-color: MISTYROSE;" />
+      <Button layoutX="539.0" layoutY="74.0" mnemonicParsing="false" onAction="#handleAddButton" text="+" textFill="#3f30c6">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="createAlbumL" layoutX="440.0" layoutY="78.0" text="Create Album" textFill="#3f30c6" />
+      <ImageView fitHeight="106.0" fitWidth="195.0" layoutX="25.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@keep-calm-and-try-coding.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="title1" layoutX="233.0" layoutY="128.0" text="Favorites ★" textFill="#3f30c6" />
+      <Label fx:id="date1" layoutX="233.0" layoutY="149.0" text="Date range" textFill="#3f30c6" />
+      <Label fx:id="nop1" layoutX="233.0" layoutY="170.0" text="Number of photos" textFill="#3f30c6" />
+      <Button fx:id="logout1" layoutX="23.0" layoutY="73.0" mnemonicParsing="false" onAction="#handleLogoutButton" text="Logout" textFill="#3f30c6">
+         <font>
+            <Font name="Jokerman" size="15.0" />
+         </font></Button>
+      <ListView fx:id="albumListView" layoutX="15.0" layoutY="278.0" prefHeight="308.0" prefWidth="573.0" />
+      <Label layoutX="25.0" layoutY="248.0" text="Your Albums:" textFill="#3f30c6">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="456.0" layoutY="113.0" mnemonicParsing="false" onAction="#searchPhotos" text="Search Photos" textFill="#3f30c6" />
+   </children>
+</AnchorPane>

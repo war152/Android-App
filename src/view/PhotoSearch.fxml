@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PhotoSearchController">
+   <children>
+      <SplitPane dividerPositions="0.560200668896321" orientation="VERTICAL" prefHeight="600.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: MISTYROSE;">
+               <children>
+                  <DatePicker fx:id="fromDate" layoutX="139.0" layoutY="54.0" prefHeight="31.0" prefWidth="109.0" promptText="date from" />
+                  <DatePicker fx:id="toDate" layoutX="267.0" layoutY="54.0" prefHeight="31.0" prefWidth="117.0" promptText="date to" />
+                  <Label layoutX="248.0" layoutY="62.0" text="to" textFill="#3f30c6">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="441.0" layoutY="54.0" mnemonicParsing="false" onAction="#searchPhotos" text="Search" textFill="#3f30c6" />
+                  <Label layoutX="13.0" layoutY="102.0" text="Search by Tag:" textFill="#3f30c6">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="15.0" />
+                     </font></Label>
+                  <TextField fx:id="tagTypeTextField" layoutX="139.0" layoutY="96.0" prefHeight="31.0" prefWidth="109.0" promptText="Tag type" />
+                  <TextField fx:id="tagValueTextField" layoutX="267.0" layoutY="96.0" prefHeight="31.0" prefWidth="117.0" promptText="Tag value" />
+                  <Label layoutX="397.0" layoutY="101.0" text="Add Tag" textFill="#3f30c6" />
+                  <Button layoutX="457.0" layoutY="93.0" mnemonicParsing="false" onAction="#addTag" prefHeight="31.0" prefWidth="30.0" text="+" textFill="#3f30c6">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="tagTable" layoutX="173.0" layoutY="137.0" prefHeight="144.0" prefWidth="252.0">
+                    <columns>
+                      <TableColumn fx:id="tagTypeColumn" prefWidth="75.0" text="Type" />
+                      <TableColumn fx:id="tagValueColumn" prefWidth="82.0" text="Value" />
+                        <TableColumn fx:id="tagDeleteColumn" prefWidth="94.0" text="Delete" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="createAlbumBtn" layoutX="189.0" layoutY="286.0" mnemonicParsing="false" onAction="#createAlbumFromResults" text="Create Album for Search Reult" textFill="#3f30c6" />
+                  <Button layoutX="14.0" layoutY="281.0" mnemonicParsing="false" onAction="#backToAlbums" text="Back" textFill="#3f30c6" />
+                  <Button fx:id="logout" layoutX="516.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleLogoutButton" text="Logout" textFill="#3f30c6" />
+                  <Label layoutX="13.0" layoutY="62.0" text="Search by Date:" textFill="#3f30c6">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TitledPane alignment="CENTER" collapsible="false" layoutX="-1.0" layoutY="-9.0" prefHeight="48.0" prefWidth="600.0" text="Search Photos" textFill="#3f30c6">
+                     <font>
+                        <Font name="Jokerman" size="25.0" />
+                     </font>
+                  </TitledPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: MISTYROSE;">
+               <children>
+                  <ListView fx:id="photoListView" layoutY="-1.0" prefHeight="296.0" prefWidth="598.0" style="-fx-background-color: MISTYROSE;" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
